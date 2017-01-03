@@ -1,4 +1,4 @@
-# RxPreferenceUtils
+# RxPreferenceUtil
 Utility functions for Android SharedPreferences including RxJava wrapper for change notifications
 
 ## Static usage
