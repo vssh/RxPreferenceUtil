@@ -2,24 +2,24 @@
 Utility functions for Android SharedPreferences including RxJava wrapper for change notifications
 
 ## Static usage
-`PreferenceUtils` can be used statically to get and set values in the default SharedPreferences.
+`PreferenceUtil` can be used statically to get and set values in the default SharedPreferences.
 
 ```java
-boolean exists = PreferenceUtils.contains(context, key);
+boolean exists = PreferenceUtil.contains(context, key);
 
-boolean val = PreferenceUtils.getBoolean(context, key, defaultVal);
-int val = PreferenceUtils.getInt(context, key, defaultVal);
-String val = PreferenceUtils.getString(context, key, defaultVal);
-long val = PreferenceUtils.getLong(context, key, defaultVal);
-float val = PreferenceUtils.getFloat(context, key, defaultVal);
-Set<String> val = PreferenceUtils.getStringSet(context, key, defaultVal);
+boolean val = PreferenceUtil.getBoolean(context, key, defaultVal);
+int val = PreferenceUtil.getInt(context, key, defaultVal);
+String val = PreferenceUtil.getString(context, key, defaultVal);
+long val = PreferenceUtil.getLong(context, key, defaultVal);
+float val = PreferenceUtil.getFloat(context, key, defaultVal);
+Set<String> val = PreferenceUtil.getStringSet(context, key, defaultVal);
 
-PreferenceUtils.putBoolean(context, key, val);
-PreferenceUtils.putInt(context, key, val);
-PreferenceUtils.putString(context, key, val);
-PreferenceUtils.putLong(context, key, val);
-PreferenceUtils.putFloat(context, key, val);
-PreferenceUtils.putStringSet(context, key, val);
+PreferenceUtil.putBoolean(context, key, val);
+PreferenceUtil.putInt(context, key, val);
+PreferenceUtil.putString(context, key, val);
+PreferenceUtil.putLong(context, key, val);
+PreferenceUtil.putFloat(context, key, val);
+PreferenceUtil.putStringSet(context, key, val);
 
 PreferenceUtil.removePreference(context, key);
 ```
