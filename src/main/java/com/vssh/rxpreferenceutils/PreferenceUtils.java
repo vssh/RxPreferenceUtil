@@ -10,11 +10,11 @@ import java.util.Set;
 /**
  * Created by varun on 24.01.16.
  */
-public class PreferenceUtil {
+public class PreferenceUtils {
     SharedPreferences mPrefs;
     SharedPreferences.Editor mEditor;
 
-    public PreferenceUtil(Context context, @Nullable String name) {
+    public PreferenceUtils(Context context, @Nullable String name) {
         if (name == null) {
             this.mPrefs = PreferenceManager.getDefaultSharedPreferences(context.getApplicationContext());
         } else {

@@ -17,10 +17,10 @@ import rx.subscriptions.Subscriptions;
  * Created by varun on 29.10.16.
  */
 
-public class RxPreferenceUtil extends PreferenceUtil {
+public class RxPreferenceUtils extends PreferenceUtils {
     private Observable<String> preferenceObservable;
 
-    public RxPreferenceUtil(Context context, @Nullable String name) {
+    public RxPreferenceUtils(Context context, @Nullable String name) {
         super(context, name);
 
         this.preferenceObservable = Observable.create(new Observable.OnSubscribe<String>() {
