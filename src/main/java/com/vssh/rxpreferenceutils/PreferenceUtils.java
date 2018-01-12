@@ -1,10 +1,12 @@
 package com.vssh.rxpreferenceutils;
 
+import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 
+import java.util.Map;
 import java.util.Set;
 
 /**
@@ -21,6 +23,11 @@ public class PreferenceUtils {
             this. mPrefs = context.getSharedPreferences(name, Context.MODE_PRIVATE);
         }
         this.mEditor = mPrefs.edit();
+    }
+
+    @TargetApi(24)
+    public static void deletePreferenceFile(Context context, String name) {
+        context.deleteSharedPreferences(name);
     }
 
     public boolean contains(String key) {
@@ -85,6 +92,10 @@ public class PreferenceUtils {
 
     public Set<String> getStringSet(String key, Set<String > defValue) {
         return mPrefs.getStringSet(key, defValue);
+    }
+
+    public Map<String, ?> getAll() {
+        return mPrefs.getAll();
     }
 
 
